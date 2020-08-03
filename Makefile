@@ -15,7 +15,7 @@ runit:
 	docker run -it --rm -p $(PORT1):80 -p $(PORT2):443 --name $(NAME) $(NAME)
 
 exec:
-	docker exec -it $(NAME) bin/bash
+	docker exec -it $(NAME) bash
 
 stop:
 	docker stop $(NAME)
