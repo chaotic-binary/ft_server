@@ -35,6 +35,7 @@ COPY ./srcs/wp-config.php .
 #phpMyAdmin
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz
 RUN tar xzf phpMyAdmin-5.0.2-all-languages.tar.gz
+RUN rm ./phpMyAdmin-5.0.2-all-languages.tar.gz
 RUN mv phpMyAdmin-5.0.2-all-languages phpMyAdmin
 
 COPY ./srcs/start.sh ./
