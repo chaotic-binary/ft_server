@@ -27,4 +27,4 @@ killall: stop remove
 	docker image rm $(NAME)
 	docker system prune
 
-.PHONY: build run exec stop
+.PHONY: build run exec stop remove runit killall
