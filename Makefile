@@ -11,6 +11,7 @@ run:
 	docker run -d --rm -p $(PORT1):80 -p $(PORT2):443 --name $(NAME) $(NAME)
 
 #interactive mode
+#add bash at the end to make it work like exec
 runit:
 	docker run -it --rm -p $(PORT1):80 -p $(PORT2):443 --name $(NAME) $(NAME)
 
@@ -23,8 +24,8 @@ stop:
 remove:
 	docker rm $(NAME)
 
-killall: stop remove
-	docker image rm $(NAME)
+rmi:
+	docker rmi $(NAME)
 	docker system prune
 
-.PHONY: build run exec stop remove runit killall
+.PHONY: build run exec stop remove runit rmi

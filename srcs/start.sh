@@ -14,7 +14,7 @@ wptitle="ft_server by ttamesha"
 wpemail="ttamesha@student.21-school.ru"
 wpuser="admin"
 wppass="admin"
-curl -d "weblog_title=$wptitle&user_name=$wpuser&admin_password=$wppass&admin_password2=$wppass&admin_email=$wpemail" -k https://$wpurl/wp-admin/install.php?step=2
+curl -d "weblog_title=$wptitle&user_name=$wpuser&admin_password=$wppass&admin_password2=$wppass&admin_email=$wpemail" -k https://$wpurl/wp-admin/install.php?step=2  > /dev/null
 
 #loop
 while true;
